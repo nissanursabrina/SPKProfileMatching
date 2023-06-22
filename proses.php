@@ -5,29 +5,28 @@
 <head>
     <title>Proses | Profile Matching</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand text-white" href="index.php">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white" href="inputdata.php">Input Data</a>
+                <a class="nav-link" href="inputdata.php">Input Data</a>
             </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="proses.php">Record</a>
+            <a class="nav-link" href="proses.php">Record</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="ranking.php">Ranking</a>
+            <a class="nav-link" href="rangking.php">Ranking</a>
           </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="about.php">About</a>
+                <a class="nav-link" href="about.php">About</a>
             </li>
         </ul>
         </div>
@@ -36,15 +35,15 @@
 
     <div class="container"><br><br>
 
-    <!-- Tambah Data -->
+    <!-- Hapus Record -->
     <form  role="form" method="post" action="inputdata.php" class="form-inline">
         <div class="form-group mb-2">
             <label class="sr-only"></label>
             <input type="text" readonly class="form-control-plaintext" value="Tambah Mahasiswa">
         </div>
-        <button type="submit" name="submittambah" class="btn btn-success">Tambah</button>
+        <button type="submit" name="submitdelete" class="btn btn-success">Tambah</button>
     </form>
-    <!-- /Tambah Data -->
+    <!-- /Hapus Record -->
 
     <!-- Hapus Record -->
     <form  role="form" method="post" action="recorddelete.php" class="form-inline">
@@ -65,55 +64,55 @@
                 $jumlah = $_SESSION['jumlahsiswa'];
                 $nama = array();
 
-                $nilaiipk = array();
-                $textipk = array();
-                $gapipk = array();
-                $bobotipk = array();
+                $nilaimm = array();
+                $textmm = array();
+                $gapmm = array();
+                $bobotmm = array();
 
-                $nilaips = array();
-                $textps = array();
-                $gapps = array();
-                $bobotps = array();
+                $nilaibig = array();
+                $textbig = array();
+                $gapbig = array();
+                $bobotbig = array();
 
-                $nilaibing = array();
-                $textbing = array();
-                $gapbing = array();
-                $bobotbing = array();
+                $nilaibindo = array();
+                $textbindo = array();
+                $gapbindo = array();
+                $bobotbindo = array();
 
-                $nilaidk = array();
-                $textdk = array();
-                $gapdk = array();
-                $bobotdk = array();
+                $nilaiipa = array();
+                $textipa = array();
+                $gapipa = array();
+                $bobotipa = array();
 
-                $nilaipres = array();
-                $textpres = array();
-                $gappres = array();
-                $bobotpres = array();
+                $nilaior = array();
+                $textor = array();
+                $gapor = array();
+                $bobotor = array();
 
-                $nilaitk = array();
-                $texttk = array();
-                $gaptk = array();
-                $bobottk = array();
+                $nilaikd = array();
+                $textkd = array();
+                $gapkd = array();
+                $bobotkd = array();
 
-                $nilaiukm = array();
-                $textukm = array();
-                $gapukm = array();
-                $bobotukm = array();
+                $nilaipk = array();
+                $textpk = array();
+                $gappk = array();
+                $bobotpk = array();
 
-                $nilaidisiplin = array();
-                $textdisiplin = array();
-                $gapdisiplin = array();
-                $bobotdisiplin = array();
+                $nilaipmr = array();
+                $textpmr = array();
+                $gappmr = array();
+                $bobotpmr = array();
 
-                $nilaiki = array();
-                $textki = array();
-                $gapki = array();
-                $bobotki = array();
+                $nilaipr = array();
+                $textpr = array();
+                $gappr = array();
+                $bobotpr = array();
 
-                $nilaismt = array();
-                $textsmt = array();
-                $gapsmt = array();
-                $bobotsmt = array();
+                $nilaikr = array();
+                $textkr = array();
+                $gapkr = array();
+                $bobotkr = array();
 
                 $ncfsiswa = array();
                 $nsfsiswa = array();
@@ -122,358 +121,352 @@
                 for($a=1;$a<=$jumlah;$a++) {
 
         	       $nama[$a] = $_POST['namasiswa'.$a];
-                   $nilaiipk[$a] = $_POST['ipk'.$a];
-                   $nilaips[$a] = $_POST['pblspeak'.$a];
-                   $nilaibing[$a] = $_POST['big'.$a];
-                   $nilaidk[$a] = $_POST['kehadiran'.$a];
-                   $nilaipres[$a] = $_POST['prestasi'.$a];
-                   $nilaitk[$a] = $_POST['tingkahlaku'.$a];
-                   $nilaiukm[$a] = $_POST['aktiforganisasi'.$a];
-                   $nilaidisiplin[$a] = $_POST['disiplin'.$a];
-                   $nilaiki[$a] = $_POST['kir'.$a];
-                   $nilaismt[$a] = $_POST['smt'.$a];
+                   $nilaimm[$a] = $_POST['mm'.$a];
+                   $nilaibig[$a] = $_POST['big'.$a];
+                   $nilaibindo[$a] = $_POST['bindo'.$a];
+                   $nilaiipa[$a] = $_POST['ipa'.$a];
+                   $nilaior[$a] = $_POST['og'.$a];
+                   $nilaikd[$a] = $_POST['kd'.$a];
+                   $nilaipk[$a] = $_POST['pk'.$a];
+                   $nilaipmr[$a] = $_POST['pmr'.$a];
+                   $nilaipr[$a] = $_POST['pr'.$a];
+                   $nilaikr[$a] = $_POST['kr'.$a];
 
-                   $sql = mysqli_query($koneksi,"INSERT INTO mahasiswa (`nama`, `ipk`, `public speaking`, `bahasa inggris`,`daftar kehadiran`,`prestasi`,`tingkah laku`,`ukm`,`disiplin`, `karya ilmiah`,`semester`) 
-                   VALUES('$nama[$a]','$nilaiipk[$a]','$nilaips[$a]','$nilaibing[$a]', '$nilaidk[$a]', '$nilaipres[$a]', '$nilaitk[$a]', '$nilaiukm[$a]', '$nilaidisiplin[$a]', '$nilaiki[$a]', '$nilaismt[$a]')") or die (mysqli_error($koneksi));
+                   $sql = mysqli_query($koneksi,"INSERT INTO siswa (nama, mm, big, bindo, ipa, og, kd, pk, pmr, pr, kr ) VALUES('$nama[$a]','$nilaimm[$a]','$nilaibig[$a]','$nilaibindo[$a]','$nilaiipa[$a]','$nilaior[$a]','$nilaikd[$a]','$nilaipk[$a]','$nilaipmr[$a]','$nilaipr[$a]','$nilaikr[$a]')") or die (mysqli_error($koneksi));
 
                 }
 
                 for($a=1;$a<=$jumlah;$a++) {
 
-                    if ($nilaiipk[$a] == "1"){
-                        $textipk[$a] = "< 2,5 ";
-                    } elseif ($nilaiipk[$a] == "2") {
-                        $textipk[$a] = ">2,5 dan <= 3";
-                    } elseif ($nilaiipk[$a] == "3") {
-                        $textipk[$a] = ">3 dan <= 3,5";
+                    if ($nilaimm[$a] == "1"){
+                        $textmm[$a] = "0-25";
+                    } elseif ($nilaimm[$a] == "2") {
+                        $textmm[$a] = "26-50";
+                    } elseif ($nilaimm[$a] == "3") {
+                        $textmm[$a] = "51-75";
                     } else {
-                        $textipk[$a] = "> 3,5";
+                        $textmm[$a] = "76-100";
                     }
 
-                    if ($nilaips[$a] == "4"){
-                        $textps[$a] = "Sangat Baik";
-                    } elseif ($nilaips[$a] == "3") {
-                        $textps[$a] = "Baik";
-                    } elseif ($nilaips[$a] == "2") {
-                        $textps[$a] = "Cukup";
+                    if ($nilaibig[$a] == "1"){
+                        $textbig[$a] = "0-25";
+                    } elseif ($nilaibig[$a] == "2") {
+                        $textbig[$a] = "26-50";
+                    } elseif ($nilaibig[$a] == "3") {
+                        $textbig[$a] = "51-75";
                     } else {
-                        $textps[$a] = "Kurang";
+                        $textbig[$a] = "76-100";
                     }
 
-                    if ($nilaibing[$a] == "4"){
-                        $textbing[$a] = "Sangat Baik";
-                    } elseif ($nilaibing[$a] == "3") {
-                        $textbing[$a] = "Baik";
-                    } elseif ($nilaibing[$a] == "2") {
-                        $textbing[$a] = "Cukup";
+                    if ($nilaibindo[$a] == "1"){
+                        $textbindo[$a] = "0-25";
+                    } elseif ($nilaibindo[$a] == "2") {
+                        $textbindo[$a] = "26-50";
+                    } elseif ($nilaibindo[$a] == "3") {
+                        $textbindo[$a] = "51-75";
                     } else {
-                        $textbing[$a] = "Kurang";
+                        $textbindo[$a] = "76-100";
                     }
 
-                    if ($nilaidk[$a] == "4"){
-                        $textdk[$a] = "Sangat Baik";
-                    } elseif ($nilaidk[$a] == "3") {
-                        $textdk[$a] = "Baik";
-                    } elseif ($nilaidk[$a] == "2") {
-                        $textdk[$a] = "Cukup";
+                    if ($nilaiipa[$a] == "1"){
+                        $textipa[$a] = "0-25";
+                    } elseif ($nilaiipa[$a] == "2") {
+                        $textipa[$a] = "26-50";
+                    } elseif ($nilaiipa[$a] == "3") {
+                        $textipa[$a] = "51-75";
                     } else {
-                        $textdk[$a] = "Kurang";
+                        $textipa[$a] = "76-100";
                     }
 
-                    if ($nilaipres[$a] == "4"){
-                        $textpres[$a] = ">=8";
-                    } elseif ($nilaipres[$a] == "3") {
-                        $textpres[$a] = "5-7";
-                    } elseif ($nilaipres[$a] == "2") {
-                        $textpres[$a] = "2-4";
+                    if ($nilaior[$a] == "1"){
+                        $textor[$a] = "Sangat Buruk";
+                    } elseif ($nilaior[$a] == "2") {
+                        $textor[$a] = "Buruk";
+                    } elseif ($nilaior[$a] == "3") {
+                        $textor[$a] = "Cukup";
                     } else {
-                        $textpres[$a] = "<=1";
+                        $textor[$a] = "Baik";
                     }
 
-                    if ($nilaitk[$a] == "4"){
-                        $texttk[$a] = "Sangat Baik";
-                    } elseif ($nilaitk[$a] == "3") {
-                        $texttk[$a] = "Baik";
-                    } elseif ($nilaitk[$a] == "2") {
-                        $texttk[$a] = "Cukup";
+                    if ($nilaikd[$a] == "1"){
+                        $textkd[$a] = "Sangat Buruk";
+                    } elseif ($nilaikd[$a] == "2") {
+                        $textkd[$a] = "Buruk";
+                    } elseif ($nilaikd[$a] == "3") {
+                        $textkd[$a] = "Cukup";
                     } else {
-                        $texttk[$a] = "Kurang";
+                        $textkd[$a] = "Baik";
                     }
 
-                    if ($nilaiukm[$a] == "4"){
-                        $textukm[$a] = "Sangat Baik";
-                    } elseif ($nilaiukm[$a] == "3") {
-                        $textukm[$a] = "Baik";
-                    } elseif ($nilaiukm[$a] == "2") {
-                        $textukm[$a] = "Cukup";
+                    if ($nilaipk[$a] == "1"){
+                        $textpk[$a] = "Sangat Buruk";
+                    } elseif ($nilaipk[$a] == "2") {
+                        $textpk[$a] = "Buruk";
+                    } elseif ($nilaipk[$a] == "3") {
+                        $textpk[$a] = "Cukup";
                     } else {
-                        $textukm[$a] = "Kurang";
+                        $textpk[$a] = "Baik";
                     }
 
-                    if ($nilaidisiplin[$a] == "4"){
-                        $textdisiplin[$a] = "Sangat Baik";
-                    } elseif ($nilaidisiplin[$a] == "3") {
-                        $textdisiplin[$a] = "Baik";
-                    } elseif ($nilaidisiplin[$a] == "2") {
-                        $textdisiplin[$a] = "Cukup";
+                    if ($nilaipmr[$a] == "1"){
+                        $textpmr[$a] = "Sangat Buruk";
+                    } elseif ($nilaipmr[$a] == "2") {
+                        $textpmr[$a] = "Buruk";
+                    } elseif ($nilaipmr[$a] == "3") {
+                        $textpmr[$a] = "Cukup";
                     } else {
-                        $textdisiplin[$a] = "Kurang";
+                        $textpmr[$a] = "Baik";
                     }
 
-                    if ($nilaiki[$a] == "4"){
-                        $textki[$a] = "Sangat Baik";
-                    } elseif ($nilaiki[$a] == "3") {
-                        $textki[$a] = "Baik";
-                    } elseif ($nilaiki[$a] == "2") {
-                        $textki[$a] = "Cukup";
+                    if ($nilaipr[$a] == "1"){
+                        $textpr[$a] = "Sangat Buruk";
+                    } elseif ($nilaipr[$a] == "2") {
+                        $textpk[$a] = "Buruk";
+                    } elseif ($nilaipr[$a] == "3") {
+                        $textpr[$a] = "Cukup";
                     } else {
-                        $textki[$a] = "Kurang";
+                        $textpr[$a] = "Baik";
                     }
 
-                    if ($nilaismt[$a] == "0"){
-                        $textsmt[$a] = "<=2 / >8";
-                    } elseif ($nilaismt[$a] == "1") {
-                        $textsmt[$a] = "3";
-                    } elseif ($nilaismt[$a] == "2") {
-                        $textsmt[$a] = "4";
-                    } elseif ($nilaismt[$a] == "3") {
-                        $textsmt[$a] = "5, 6";
+                    if ($nilaikr[$a] == "1"){
+                        $textkr[$a] = "Sangat Buruk";
+                    } elseif ($nilaikr[$a] == "2") {
+                        $textkr[$a] = "Buruk";
+                    } elseif ($nilaikr[$a] == "3") {
+                        $textkr[$a] = "Cukup";
                     } else {
-                        $textsmt[$a] = "7, 8";
+                        $textkr[$a] = "Baik";
                     }
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO keteranganmhs (nama, ket_ipk, ket_ps, ket_bing, ket_dk, ket_pres, ket_tk, ket_ukm, ket_disiplin, ket_ki, ket_smt) 
-                    VALUES('$nama[$a]','$textipk[$a]','$textps[$a]','$textbing[$a]','$textdk[$a]', '$textpres[$a]', '$texttk[$a]', '$textukm[$a]', '$textdisiplin[$a]', '$textki[$a]', '$textsmt[$a]')") or die (mysqli_error($koneksi));
+                    $sql = mysqli_query($koneksi,"INSERT INTO keterangansiswa (nama, ket_mm, ket_big, ket_bindo, ket_ipa, ket_or, ket_kd, ket_pk, ket_pmr, ket_pr, ket_kr) VALUES('$nama[$a]','$textmm[$a]','$textbig[$a]','$textbindo[$a]','$textipa[$a]','$textor[$a]','$textkd[$a]','$textpk[$a]','$textpmr[$a]','$textpr[$a]','$textkr[$a]')") or die (mysqli_error($koneksi));
 
                 }
 
                 for($a=1;$a<=$jumlah;$a++) {
                     
                     $nama[$a] = $_POST['namasiswa'.$a];
-                    $gapipk[$a] = $nilaiipk[$a] - 4;
-                    $gapps[$a] = $nilaips[$a] - 4;
-                    $gapbing[$a] = $nilaibing[$a] - 4;
-                    $gapdk[$a] = $nilaidk[$a] - 3;
-                    $gappres[$a] = $nilaipres[$a] - 3;
-                    $gaptk[$a] = $nilaitk[$a] - 4;
-                    $gapukm[$a] = $nilaiukm[$a] - 5;
-                    $gapdisiplin[$a] = $nilaidisiplin[$a] - 4;
-                    $gapki[$a] = $nilaiki[$a] - 4;
-                    $gapsmt[$a] = $nilaismt[$a] - 3;
+                    $gapmm[$a] = $nilaimm[$a] - 3;
+                    $gapbig[$a] = $nilaibig[$a] - 3;
+                    $gapbindo[$a] = $nilaibindo[$a] - 3;
+                    $gapipa[$a] = $nilaiipa[$a] - 3;
+                    $gapor[$a] = $nilaior[$a] - 3;
+                    $gapkd[$a] = $nilaikd[$a] - 3;
+                    $gappk[$a] = $nilaipk[$a] - 3;
+                    $gappmr[$a] = $nilaipmr[$a] - 3;
+                    $gappr[$a] = $nilaipr[$a] - 3;
+                    $gapkr[$a] = $nilaikr[$a] - 3;
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO gapmhs (nama, gapipk, gapps, gapbing, gapdk, gappres, gaptk, gapukm, gapdisiplin, gapki, gapsmt) 
-                    VALUES('$nama[$a]','$gapipk[$a]','$gapps[$a]','$gapbing[$a]', '$gapdk[$a]', '$gappres[$a]', '$gaptk[$a]', '$gapukm[$a]', '$gapdisiplin[$a]', '$gapki[$a]', '$gapsmt[$a]')") or die (mysqli_error($koneksi));
+                    $sql = mysqli_query($koneksi,"INSERT INTO gapsiswa (nama, gapmm, gapbig, gapbindo, gapipa, gapor, gapkd, gappk, gappmr, gappr, gapkr) VALUES('$nama[$a]','$gapmm[$a]','$gapbig[$a]','$gapbindo[$a]','$gapipa[$a]','$gapor[$a]','$gapkd[$a]','$gappk[$a]','$gappmr[$a],'$gappr[$a]','$gapkr[$a]')") or die (mysqli_error($koneksi));
 
                 }
 
                 for($a=1;$a<=$jumlah;$a++) {
 
-                    if ($gapipk[$a] == "0"){
-                        $bobotipk[$a] = "5";
-                    } elseif ($gapipk[$a] == "1") {
-                        $bobotipk[$a] = "4.5";
-                    } elseif ($gapipk[$a] == "-1") {
-                        $bobotipk[$a] = "4";
-                    } elseif ($gapipk[$a] == "2") {
-                        $bobotipk[$a] = "3.5";
-                    } elseif ($gapipk[$a] == "-2") {
-                        $bobotipk[$a] = "3";
-                    } elseif ($gapipk[$a] == "3") {
-                        $bobotipk[$a] = "2.5";
-                    } elseif ($gapipk[$a] == "-3") {
-                        $bobotipk[$a] = "2";
-                    } elseif ($gapipk[$a] == "4") {
-                        $bobotipk[$a] = "1.5";
+                    if ($gapmm[$a] == "0"){
+                        $bobotmm[$a] = "5";
+                    } elseif ($gapmm[$a] == "1") {
+                        $bobotmm[$a] = "4.5";
+                    } elseif ($gapmm[$a] == "-1") {
+                        $bobotmm[$a] = "4";
+                    } elseif ($gapmm[$a] == "2") {
+                        $bobotmm[$a] = "3.5";
+                    } elseif ($gapmm[$a] == "-2") {
+                        $bobotmm[$a] = "3";
+                    } elseif ($gapmm[$a] == "3") {
+                        $bobotmm[$a] = "2.5";
+                    } elseif ($gapmm[$a] == "-3") {
+                        $bobotmm[$a] = "2";
+                    } elseif ($gapmm[$a] == "4") {
+                        $bobotmm[$a] = "1.5";
                     } else {
-                        $bobotipk[$a] = "1";
+                        $bobotmm[$a] = "1";
                     }
 
-                    if ($gapps[$a] == "0"){
-                        $bobotps[$a] = "5";
-                    } elseif ($gapps[$a] == "1") {
-                        $bobotps[$a] = "4.5";
-                    } elseif ($gapps[$a] == "-1") {
-                        $bobotps[$a] = "4";
-                    } elseif ($gapps[$a] == "2") {
-                        $bobotps[$a] = "3.5";
-                    } elseif ($gapps[$a] == "-2") {
-                        $bobotps[$a] = "3";
-                    } elseif ($gapps[$a] == "3") {
-                        $bobotps[$a] = "2.5";
-                    } elseif ($gapps[$a] == "-3") {
-                        $bobotps[$a] = "2";
-                    } elseif ($gapps[$a] == "4") {
-                        $bobotps[$a] = "1.5";
+                    if ($gapbig[$a] == "0"){
+                        $bobotbig[$a] = "5";
+                    } elseif ($gapbig[$a] == "1") {
+                        $bobotbig[$a] = "4.5";
+                    } elseif ($gapbig[$a] == "-1") {
+                        $bobotbig[$a] = "4";
+                    } elseif ($gapbig[$a] == "2") {
+                        $bobotbig[$a] = "3.5";
+                    } elseif ($gapbig[$a] == "-2") {
+                        $bobotbig[$a] = "3";
+                    } elseif ($gapbig[$a] == "3") {
+                        $bobotbig[$a] = "2.5";
+                    } elseif ($gapbig[$a] == "-3") {
+                        $bobotbig[$a] = "2";
+                    } elseif ($gapbig[$a] == "4") {
+                        $bobotbig[$a] = "1.5";
                     } else {
-                        $bobotps[$a] = "1";
+                        $bobotbig[$a] = "1";
                     }
 
-                    if ($gapbing[$a] == "0"){
-                        $bobotbing[$a] = "5";
-                    } elseif ($gapbing[$a] == "1") {
-                        $bobotbing[$a] = "4.5";
-                    } elseif ($gapbing[$a] == "-1") {
-                        $bobotbing[$a] = "4";
-                    } elseif ($gapbing[$a] == "2") {
-                        $bobotbing[$a] = "3.5";
-                    } elseif ($gapbing[$a] == "-2") {
-                        $bobotbing[$a] = "3";
-                    } elseif ($gapbing[$a] == "3") {
-                        $bobotbing[$a] = "2.5";
-                    } elseif ($gapbing[$a] == "-3") {
-                        $bobotbing[$a] = "2";
-                    } elseif ($gapbing[$a] == "4") {
-                        $bobotbing[$a] = "1.5";
+                    if ($gapbindo[$a] == "0"){
+                        $bobotbindo[$a] = "5";
+                    } elseif ($gapbindo[$a] == "1") {
+                        $bobotbindo[$a] = "4.5";
+                    } elseif ($gapbindo[$a] == "-1") {
+                        $bobotbindo[$a] = "4";
+                    } elseif ($gapbindo[$a] == "2") {
+                        $bobotbindo[$a] = "3.5";
+                    } elseif ($gapbindo[$a] == "-2") {
+                        $bobotbindo[$a] = "3";
+                    } elseif ($gapbindo[$a] == "3") {
+                        $bobotbindo[$a] = "2.5";
+                    } elseif ($gapbindo[$a] == "-3") {
+                        $bobotbindo[$a] = "2";
+                    } elseif ($gapbindo[$a] == "4") {
+                        $bobotbindo[$a] = "1.5";
                     } else {
-                        $bobotbing[$a] = "1";
+                        $bobotbindo[$a] = "1";
                     }
 
-                    if ($gapdk[$a] == "0"){
-                        $bobotdk[$a] = "5";
-                    } elseif ($gapdk[$a] == "1") {
-                        $bobotdk[$a] = "4.5";
-                    } elseif ($gapdk[$a] == "-1") {
-                        $bobotdk[$a] = "4";
-                    } elseif ($gapdk[$a] == "2") {
-                        $bobotdk[$a] = "3.5";
-                    } elseif ($gapdk[$a] == "-2") {
-                        $bobotdk[$a] = "3";
-                    } elseif ($gapdk[$a] == "3") {
-                        $bobotdk[$a] = "2.5";
-                    } elseif ($gapdk[$a] == "-3") {
-                        $bobotdk[$a] = "2";
-                    } elseif ($gapdk[$a] == "4") {
-                        $bobotdk[$a] = "1.5";
+                    if ($gapipa[$a] == "0"){
+                        $bobotipa[$a] = "5";
+                    } elseif ($gapipa[$a] == "1") {
+                        $bobotipa[$a] = "4.5";
+                    } elseif ($gapipa[$a] == "-1") {
+                        $bobotipa[$a] = "4";
+                    } elseif ($gapipa[$a] == "2") {
+                        $bobotipa[$a] = "3.5";
+                    } elseif ($gapipa[$a] == "-2") {
+                        $bobotipa[$a] = "3";
+                    } elseif ($gapipa[$a] == "3") {
+                        $bobotipa[$a] = "2.5";
+                    } elseif ($gapipa[$a] == "-3") {
+                        $bobotipa[$a] = "2";
+                    } elseif ($gapipa[$a] == "4") {
+                        $bobotipa[$a] = "1.5";
                     } else {
-                        $bobotdk[$a] = "1";
+                        $bobotipa[$a] = "1";
                     }
 
-                    if ($gappres[$a] == "0"){
-                        $bobotpres[$a] = "5";
-                    } elseif ($gappres[$a] == "1") {
-                        $bobotpres[$a] = "4.5";
-                    } elseif ($gappres[$a] == "-1") {
-                        $bobotpres[$a] = "4";
-                    } elseif ($gappres[$a] == "2") {
-                        $bobotpres[$a] = "3.5";
-                    } elseif ($gappres[$a] == "-2") {
-                        $bobotpres[$a] = "3";
-                    } elseif ($gappres[$a] == "3") {
-                        $bobotpres[$a] = "2.5";
-                    } elseif ($gappres[$a] == "-3") {
-                        $bobotpres[$a] = "2";
-                    } elseif ($gappres[$a] == "4") {
-                        $bobotpres[$a] = "1.5";
+                    if ($gapor[$a] == "0"){
+                        $bobotor[$a] = "5";
+                    } elseif ($gapor[$a] == "1") {
+                        $bobotor[$a] = "4.5";
+                    } elseif ($gapor[$a] == "-1") {
+                        $bobotor[$a] = "4";
+                    } elseif ($gapor[$a] == "2") {
+                        $bobotor[$a] = "3.5";
+                    } elseif ($gapor[$a] == "-2") {
+                        $bobotor[$a] = "3";
+                    } elseif ($gapor[$a] == "3") {
+                        $bobotor[$a] = "2.5";
+                    } elseif ($gapor[$a] == "-3") {
+                        $bobotor[$a] = "2";
+                    } elseif ($gapor[$a] == "4") {
+                        $bobotor[$a] = "1.5";
                     } else {
-                        $bobotpres[$a] = "1";
+                        $bobotor[$a] = "1";
                     }
 
-                    if ($gaptk[$a] == "0"){
-                        $bobottk[$a] = "5";
-                    } elseif ($gaptk[$a] == "1") {
-                        $bobottk[$a] = "4.5";
-                    } elseif ($gaptk[$a] == "-1") {
-                        $bobottk[$a] = "4";
-                    } elseif ($gaptk[$a] == "2") {
-                        $bobottk[$a] = "3.5";
-                    } elseif ($gaptk[$a] == "-2") {
-                        $bobottk[$a] = "3";
-                    } elseif ($gaptk[$a] == "3") {
-                        $bobottk[$a] = "2.5";
-                    } elseif ($gaptk[$a] == "-3") {
-                        $bobottk[$a] = "2";
-                    } elseif ($gaptk[$a] == "4") {
-                        $bobottk[$a] = "1.5";
+                    if ($gapkd[$a] == "0"){
+                        $bobotkd[$a] = "5";
+                    } elseif ($gapkd[$a] == "1") {
+                        $bobotkd[$a] = "4.5";
+                    } elseif ($gapkd[$a] == "-1") {
+                        $bobotkd[$a] = "4";
+                    } elseif ($gapkd[$a] == "2") {
+                        $bobotkd[$a] = "3.5";
+                    } elseif ($gapkd[$a] == "-2") {
+                        $bobotkd[$a] = "3";
+                    } elseif ($gapkd[$a] == "3") {
+                        $bobotkd[$a] = "2.5";
+                    } elseif ($gapkd[$a] == "-3") {
+                        $bobotkd[$a] = "2";
+                    } elseif ($gapkd[$a] == "4") {
+                        $bobotkd[$a] = "1.5";
                     } else {
-                        $bobottk[$a] = "1";
+                        $bobotkd[$a] = "1";
                     }
 
-                    if ($gapukm[$a] == "0"){
-                        $bobotukm[$a] = "5";
-                    } elseif ($gapukm[$a] == "1") {
-                        $bobotukm[$a] = "4.5";
-                    } elseif ($gapukm[$a] == "-1") {
-                        $bobotukm[$a] = "4";
-                    } elseif ($gapukm[$a] == "2") {
-                        $bobotukm[$a] = "3.5";
-                    } elseif ($gapukm[$a] == "-2") {
-                        $bobotukm[$a] = "3";
-                    } elseif ($gapukm[$a] == "3") {
-                        $bobotukm[$a] = "2.5";
-                    } elseif ($gapukm[$a] == "-3") {
-                        $bobotukm[$a] = "2";
-                    } elseif ($gapukm[$a] == "4") {
-                        $bobotukm[$a] = "1.5";
+                    if ($gappk[$a] == "0"){
+                        $bobotpk[$a] = "5";
+                    } elseif ($gappk[$a] == "1") {
+                        $bobotpk[$a] = "4.5";
+                    } elseif ($gappk[$a] == "-1") {
+                        $bobotpk[$a] = "4";
+                    } elseif ($gappk[$a] == "2") {
+                        $bobotpk[$a] = "3.5";
+                    } elseif ($gappk[$a] == "-2") {
+                        $bobotpk[$a] = "3";
+                    } elseif ($gappk[$a] == "3") {
+                        $bobotpk[$a] = "2.5";
+                    } elseif ($gappk[$a] == "-3") {
+                        $bobotpk[$a] = "2";
+                    } elseif ($gappk[$a] == "4") {
+                        $bobotpk[$a] = "1.5";
                     } else {
-                        $bobotukm[$a] = "1";
+                        $bobotpk[$a] = "1";
                     }
 
-                    if ($gapdisiplin[$a] == "0"){
-                        $bobotdisiplin[$a] = "5";
-                    } elseif ($gapdisiplin[$a] == "1") {
-                        $bobotdisiplin[$a] = "4.5";
-                    } elseif ($gapdisiplin[$a] == "-1") {
-                        $bobotdisiplin[$a] = "4";
-                    } elseif ($gapdisiplin[$a] == "2") {
-                        $bobotdisiplin[$a] = "3.5";
-                    } elseif ($gapdisiplin[$a] == "-2") {
-                        $bobotdisiplin[$a] = "3";
-                    } elseif ($gapdisiplin[$a] == "3") {
-                        $bobotdisiplin[$a] = "2.5";
-                    } elseif ($gapdisiplin[$a] == "-3") {
-                        $bobotdisiplin[$a] = "2";
-                    } elseif ($gapdisiplin[$a] == "4") {
-                        $bobotdisiplin[$a] = "1.5";
+                    if ($gappmr[$a] == "0"){
+                        $bobotpmr[$a] = "5";
+                    } elseif ($gappmr[$a] == "1") {
+                        $bobotpmr[$a] = "4.5";
+                    } elseif ($gappmr[$a] == "-1") {
+                        $bobotpmr[$a] = "4";
+                    } elseif ($gappmr[$a] == "2") {
+                        $bobotpmr[$a] = "3.5";
+                    } elseif ($gappmr[$a] == "-2") {
+                        $bobotpmr[$a] = "3";
+                    } elseif ($gappmr[$a] == "3") {
+                        $bobotpmr[$a] = "2.5";
+                    } elseif ($gappmr[$a] == "-3") {
+                        $bobotpmr[$a] = "2";
+                    } elseif ($gappmr[$a] == "4") {
+                        $bobotpmr[$a] = "1.5";
                     } else {
-                        $bobotdisiplin[$a] = "1";
+                        $bobotpmr[$a] = "1";
                     }
 
-                    if ($gapki[$a] == "0"){
-                        $bobotki[$a] = "5";
-                    } elseif ($gapki[$a] == "1") {
-                        $bobotki[$a] = "4.5";
-                    } elseif ($gapki[$a] == "-1") {
-                        $bobotki[$a] = "4";
-                    } elseif ($gapki[$a] == "2") {
-                        $bobotki[$a] = "3.5";
-                    } elseif ($gapki[$a] == "-2") {
-                        $bobotki[$a] = "3";
-                    } elseif ($gapki[$a] == "3") {
-                        $bobotki[$a] = "2.5";
-                    } elseif ($gapki[$a] == "-3") {
-                        $bobotki[$a] = "2";
-                    } elseif ($gapki[$a] == "4") {
-                        $bobotki[$a] = "1.5";
+                    if ($gappr[$a] == "0"){
+                        $bobotpr[$a] = "5";
+                    } elseif ($gappr[$a] == "1") {
+                        $bobotpr[$a] = "4.5";
+                    } elseif ($gappr[$a] == "-1") {
+                        $bobotpr[$a] = "4";
+                    } elseif ($gappr[$a] == "2") {
+                        $bobotpr[$a] = "3.5";
+                    } elseif ($gappr[$a] == "-2") {
+                        $bobotpr[$a] = "3";
+                    } elseif ($gappr[$a] == "3") {
+                        $bobotpr[$a] = "2.5";
+                    } elseif ($gappr[$a] == "-3") {
+                        $bobotpr[$a] = "2";
+                    } elseif ($gappr[$a] == "4") {
+                        $bobotpr[$a] = "1.5";
                     } else {
-                        $bobotki[$a] = "1";
+                        $bobotpr[$a] = "1";
                     }
 
-                    if ($gapsmt[$a] == "0"){
-                        $bobotsmt[$a] = "5";
-                    } elseif ($gapsmt[$a] == "1") {
-                        $bobotsmt[$a] = "4.5";
-                    } elseif ($gapsmt[$a] == "-1") {
-                        $bobotsmt[$a] = "4";
-                    } elseif ($gapsmt[$a] == "2") {
-                        $bobotsmt[$a] = "3.5";
-                    } elseif ($gapsmt[$a] == "-2") {
-                        $bobotsmt[$a] = "3";
-                    } elseif ($gapsmt[$a] == "3") {
-                        $bobotipk[$a] = "2.5";
-                    } elseif ($gapsmt[$a] == "-3") {
-                        $bobotsmt[$a] = "2";
-                    } elseif ($gapsmt[$a] == "4") {
-                        $bobotsmt[$a] = "1.5";
+                    if ($gapkr[$a] == "0"){
+                        $bobotkr[$a] = "5";
+                    } elseif ($gapkr[$a] == "1") {
+                        $bobotkr[$a] = "4.5";
+                    } elseif ($gapkr[$a] == "-1") {
+                        $bobotkr[$a] = "4";
+                    } elseif ($gapkr[$a] == "2") {
+                        $bobotkr[$a] = "3.5";
+                    } elseif ($gapkr[$a] == "-2") {
+                        $bobotkr[$a] = "3";
+                    } elseif ($gapkr[$a] == "3") {
+                        $bobotkr[$a] = "2.5";
+                    } elseif ($gapkr[$a] == "-3") {
+                        $bobotkr[$a] = "2";
+                    } elseif ($gapkr[$a] == "4") {
+                        $bobotkr[$a] = "1.5";
                     } else {
-                        $bobotsmt[$a] = "1";
+                        $bobotkr[$a] = "1";
                     }
 
-                    $ncfsiswa[$a] = (($bobotipk[$a]) + ($bobotps[$a]) + ($bobotpres[$a]) + ($bobotki[$a]) + ($bobotbing[$a]) + ($bobotdk[$a]))/6;
-                    $nsfsiswa[$a] = (($bobotsmt[$a]) + ($bobottk[$a]) + ($bobotukm[$a]) + ($bobotdisiplin[$a]))/4;
+                    $ncfsiswa[$a] = (($bobotmm[$a]) + ($bobotbig[$a]) + ($bobotbindo[$a]) + ($bobotipa[$a]) + ($bobotor[$a]) + ($bobotkd[$a]))/6;
+                    $nsfsiswa[$a] = (($bobotpk[$a]) + ($bobotpmr[$a]) + ($bobotpr[$a]) + ($bobotkr[$a]))/4;
                     $hasilsiswa[$a] = (0.6 * $ncfsiswa[$a]) + (0.4 * $nsfsiswa[$a]);
 
-                    $sql = mysqli_query($koneksi,"INSERT INTO hasilmhs (nama, bobotipk, bobotps, bobotbing, bobotdk, bobotpres, bobottk, bobotukm, bobotdisiplin, bobotki, bobotsmt, ncf, nsf, hasil) 
-                    VALUES('$nama[$a]','$bobotipk[$a]','$bobotps[$a]','$bobotbing[$a]', '$bobotdk[$a]', '$bobotpres[$a]', '$bobottk[$a]', '$bobotukm[$a]', '$bobotdisiplin[$a]', '$bobotki[$a]', '$bobotsmt[$a]','$ncfsiswa[$a]','$nsfsiswa[$a]','$hasilsiswa[$a]')") or die (mysqli_error($koneksi));
+                    $sql = mysqli_query($koneksi,"INSERT INTO hasilsiswa (nama, bobotmm, bobotbig, bobotbindo, bobotipa, bobotor, bobotkd, bobotpk, bobotpmr, bobotpr, bobotkr, ncf, nsf, hasil) VALUES('$nama[$a]','$bobotmm[$a]','$bobotbig[$a]','$bobotbindo[$a]','$bobotipa[$a]','$bobotor[$a]','$bobotkd[$a]','$bobotpk[$a]','$bobotpmr[$a]','$bobotpr[$a]','$bobotkr[$a]','$ncfsiswa[$a]','$nsfsiswa[$a]','$hasilsiswa[$a]')") or die (mysqli_error($koneksi));
 
                 }
 
@@ -492,22 +485,22 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nama</th>
-              <th scope="col">IPK</th>
-              <th scope="col">Public Speaking</th>
-              <th scope="col">Bahasa Inggris</th>
-              <th scope="col">Daftar Kehadiran</th>
-              <th scope="col">Prestasi</th>
-              <th scope="col">Tingkah Laku</th>
-              <th scope="col">UKM</th>
+              <th scope="col">MM</th>
+              <th scope="col">BIG</th>
+              <th scope="col">BINDO</th>
+              <th scope="col">IPA</th>
+              <th scope="col">OR</th>
               <th scope="col">Kedisiplinan</th>
-              <th scope="col">Karya Ilmiah</th>
-              <th scope="col">Semester</th>
+              <th scope="col">Pramuka</th>
+              <th scope="col">PMR</th>
+              <th scope="col">Perilaku</th>
+              <th scope="col">Kerapian</th>
               <th scope="col">Aksi</th>
             </tr>
         </thead>
         <tbody>
             <?php 
-                $query1 = mysqli_query($koneksi,"SELECT * FROM keteranganmhs");
+                $query1 = mysqli_query($koneksi,"SELECT * FROM keterangansiswa");
                 if(mysqli_num_rows($query1)>0){ 
             ?>
             <?php
@@ -517,20 +510,19 @@
             <tr>
                 <th scope="row"><?php echo $a; ?></th>
                 <td><?php echo $data["nama"];?></td>
-                <td><?php echo $data["ket_ipk"];?></td>
-                <td><?php echo $data["ket_ps"];?></td>
-                <td><?php echo $data["ket_bing"];?></td>
-                <td><?php echo $data["ket_dk"];?></td>
-                <td><?php echo $data["ket_pres"];?></td>
-                <td><?php echo $data["ket_tk"];?></td>
-                <td><?php echo $data["ket_ukm"];?></td>
-                <td><?php echo $data["ket_disiplin"];?></td>
-                <td><?php echo $data["ket_ki"];?></td>
-                <td><?php echo $data["ket_smt"];?></td>
+                <td><?php echo $data["ket_mm"];?></td>
+                <td><?php echo $data["ket_big"];?></td>
+                <td><?php echo $data["ket_bindo"];?></td>
+                <td><?php echo $data["ket_ipa"];?></td>
+                <td><?php echo $data["ket_or"];?></td>
+                <td><?php echo $data["ket_kd"];?></td>
+                <td><?php echo $data["ket_pk"];?></td>
+                <td><?php echo $data["ket_pmr"];?></td>
+                <td><?php echo $data["ket_pr"];?></td>
+                <td><?php echo $data["ket_kr"];?></td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                       <!-- <button type="button" class="btn btn-danger" onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'">Hapus</button>-->
-                       <button class="btn btn-danger" onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn btn-warning" onclick="window.location.href='delete.php?id=<?php echo $data['nama']; ?>'">Hapus</button>
                     </div>
                 </td>
             </tr>
@@ -551,21 +543,21 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Nama</th>
-                  <th scope="col">IPK</th>
-                  <th scope="col">Public Speaking</th>
-                  <th scope="col">Bahasa Inggris</th>
-                  <th scope="col">Daftar Kehadiran</th>
-                  <th scope="col">Prestasi</th>
-                  <th scope="col">Tingkah Laku</th>
-                  <th scope="col">UKM</th>
+                  <th scope="col">MM</th>
+                  <th scope="col">BIG</th>
+                  <th scope="col">BINDO</th>
+                  <th scope="col">IPA</th>
+                  <th scope="col">OR</th>
                   <th scope="col">Kedisiplinan</th>
-                  <th scope="col">Karya Ilmiah</th>
-                  <th scope="col">Semester</th>
+                  <th scope="col">Pramuka</th>
+                  <th scope="col">PMR</th>
+                  <th scope="col">Perilaku</th>
+                  <th scope="col">Kerapian</th>
                 </tr>
             </thead>
             <tbody>
                 <?php 
-                    $query = mysqli_query($koneksi,"SELECT * FROM mahasiswa");
+                    $query = mysqli_query($koneksi,"SELECT * FROM siswa");
                     if(mysqli_num_rows($query)>0){ 
                 ?>
                 <?php
@@ -575,16 +567,16 @@
                 <tr>
                   <th scope="row"><?php echo $a; ?></th>
                   <td><?php echo $data["nama"];?></td>
-                  <td><?php echo $data["ipk"];?></td>
-                  <td><?php echo $data["public speaking"];?></td>
-                  <td><?php echo $data["bahasa inggris"];?></td>
-                  <td><?php echo $data["daftar kehadiran"];?></td>
-                  <td><?php echo $data["prestasi"];?></td>
-                  <td><?php echo $data["tingkah laku"];?></td>
-                  <td><?php echo $data["ukm"];?></td>
-                  <td><?php echo $data["disiplin"];?></td>
-                  <td><?php echo $data["karya ilmiah"];?></td>
-                  <td><?php echo $data["semester"];?></td>
+                  <td><?php echo $data["mm"];?></td>
+                  <td><?php echo $data["big"];?></td>
+                  <td><?php echo $data["bindo"];?></td>
+                  <td><?php echo $data["ipa"];?></td>
+                  <td><?php echo $data["og"];?></td>
+                  <td><?php echo $data["kd"];?></td>
+                  <td><?php echo $data["pk"];?></td>
+                  <td><?php echo $data["pmr"];?></td>
+                  <td><?php echo $data["pr"];?></td>
+                  <td><?php echo $data["kr"];?></td>
                 </tr>
                 <?php $a++; } ?>
                 <?php } ?>
@@ -593,15 +585,15 @@
                 <tr>
                   <th scope="col">GAP</th>
                   <th scope="col"></th>
-                  <th scope="col">4</th>
-                  <th scope="col">4</th>
-                  <th scope="col">4</th>
                   <th scope="col">3</th>
                   <th scope="col">3</th>
-                  <th scope="col">4</th>
-                  <th scope="col">5</th>
-                  <th scope="col">4</th>
-                  <th scope="col">4</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
                   <th scope="col">3</th>
                 </tr>
             </thead>

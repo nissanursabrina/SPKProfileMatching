@@ -2,7 +2,7 @@
 $servername = "localhost"; 
 $username = "root";
 $password = ""; 
-$dbname = "spkprofilematching";
+$dbname = "spkpmcoba";
  
 // Create connection
 $koneksi = mysqli_connect($servername, $username, $password, $dbname); 

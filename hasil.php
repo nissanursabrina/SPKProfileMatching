@@ -9,24 +9,24 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand text-white" href="index.php">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.php">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white" href="inputdata.php">Input Data</a>
+                <a class="nav-link" href="inputdata.php">Input Data</a>
             </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="proses.php">Record</a>
+            <a class="nav-link" href="proses.php">Record</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="ranking.php">Ranking</a>
+            <a class="nav-link" href="rangking.php">Ranking</a>
           </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="about.php">About</a>
+                <a class="nav-link" href="about.php">About</a>
             </li>
         </ul>
         </div>
@@ -41,23 +41,23 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                  <th scope="col">No.</th>
+                  <th scope="col">#</th>
                   <th scope="col">Nama</th>
-                  <th scope="col">IPK</th>
-                  <th scope="col">Public Speaking</th>
-                  <th scope="col">Bahasa Inggris</th>
-                  <th scope="col">Daftar Kehadiran</th>
-                  <th scope="col">Prestasi</th>
-                  <th scope="col">Tingkah Laku</th>
-                  <th scope="col">Aktif UKM atau Organisasi</th>
+                  <th scope="col">MM</th>
+                  <th scope="col">BIG</th>
+                  <th scope="col">BINDO</th>
+                  <th scope="col">IPA</th>
+                  <th scope="col">OR</th>
                   <th scope="col">Kedisiplinan</th>
-                  <th scope="col">Karya Ilmiah</th>
-                  <th scope="col">Semester</th>
+                  <th scope="col">Pramuka</th>
+                  <th scope="col">PMR</th>
+                  <th scope="col">Perilaku</th>
+                  <th scope="col">Kerapian</th>
                 </tr>
             </thead>
             <tbody>
                 <?php 
-                    $query = mysqli_query($koneksi,"SELECT * FROM mahasiswa");
+                    $query = mysqli_query($koneksi,"SELECT * FROM siswa");
                     if(mysqli_num_rows($query)>0){ 
                 ?>
                 <?php
@@ -67,16 +67,16 @@
                 <tr>
                   <th scope="row"><?php echo $a; ?></th>
                   <td><?php echo $data["nama"];?></td>
-                  <td><?php echo $data["ipk"];?></td>
-                  <td><?php echo $data["public speaking"];?></td>
-                  <td><?php echo $data["bahasa inggris"];?></td>
-                  <td><?php echo $data["daftar kehadiran"];?></td>
-                  <td><?php echo $data["prestasi"];?></td>
-                  <td><?php echo $data["tingkah laku"];?></td>
-                  <td><?php echo $data["ukm"];?></td>
-                  <td><?php echo $data["disiplin"];?></td>
-                  <td><?php echo $data["karya ilmiah"];?></td>
-                  <td><?php echo $data["semester"];?></td>
+                  <td><?php echo $data["mm"];?></td>
+                  <td><?php echo $data["big"];?></td>
+                  <td><?php echo $data["bindo"];?></td>
+                  <td><?php echo $data["ipa"];?></td>
+                  <td><?php echo $data["og"];?></td>
+                  <td><?php echo $data["kd"];?></td>
+                  <td><?php echo $data["pk"];?></td>
+                  <td><?php echo $data["pmr"];?></td>
+                  <td><?php echo $data["pr"];?></td>
+                  <td><?php echo $data["kr"];?></td>
                 </tr>
                 <?php $a++; } ?>
                 <?php } ?>
@@ -88,18 +88,18 @@
                   <th scope="col">3</th>
                   <th scope="col">3</th>
                   <th scope="col">3</th>
-                  <th scope="col">2</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
-                  <th scope="col">0</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
+                  <th scope="col">3</th>
                 </tr>
             </thead>
             <tbody>
                 <?php 
-                    $query = mysqli_query($koneksi,"SELECT * FROM gapmhs");
+                    $query = mysqli_query($koneksi,"SELECT * FROM gapsiswa");
                     if(mysqli_num_rows($query)>0){ 
                 ?>
                 <?php
@@ -109,16 +109,16 @@
                 <tr>
                   <th scope="row"><?php echo $a; ?></th>
                   <td><?php echo $data["nama"];?></td>
-                  <td><?php echo $data["gapipk"];?></td>
-                  <td><?php echo $data["gapps"];?></td>
-                  <td><?php echo $data["gapbing"];?></td>
-                  <td><?php echo $data["gapdk"];?></td>
-                  <td><?php echo $data["gappres"];?></td>
-                  <td><?php echo $data["gaptk"];?></td>
-                  <td><?php echo $data["gapukm"];?></td>
-                  <td><?php echo $data["gapdisiplin"];?></td>
-                  <td><?php echo $data["gapki"];?></td>
-                  <td><?php echo $data["gapsmt"];?></td>
+                  <td><?php echo $data["gapmm"];?></td>
+                  <td><?php echo $data["gapbig"];?></td>
+                  <td><?php echo $data["gapbindo"];?></td>
+                  <td><?php echo $data["gapipa"];?></td>
+                  <td><?php echo $data["gapor"];?></td>
+                  <td><?php echo $data["gapkd"];?></td>
+                  <td><?php echo $data["gappk"];?></td>
+                  <td><?php echo $data["gappmr"];?></td>
+                  <td><?php echo $data["gappr"];?></td>
+                  <td><?php echo $data["gapkr"];?></td>
                 </tr>
                 <?php $a++; } ?>
                 <?php } ?>
@@ -133,16 +133,16 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nama</th>
-                <th scope="col">Bobot IPK</th>
-                <th scope="col">Bobot Public Speaking</th>
-                <th scope="col">Bobot Bahasa Inggris</th>
-                <th scope="col">Bobot Daftar Kehadiran</th>
-                <th scope="col">Bobot Prestasi</th>
-                <th scope="col">Bobot Tingkah Laku</th>
-                <th scope="col">Bobot Aktif UKM atau Organisasi</th>
+                <th scope="col">Bobot MM</th>
+                <th scope="col">Bobot BIG</th>
+                <th scope="col">Bobot BINDO</th>
+                <th scope="col">Bobot IPA</th>
+                <th scope="col">Bobot OR</th>
                 <th scope="col">Bobot Kedisiplinan</th>
-                <th scope="col">Bobot Karya Ilmiah</th>
-                <th scope="col">Bobot Semester</th>
+                <th scope="col">Bobot Pramuka</th>
+                <th scope="col">Bobot PMR</th>
+                <th scope="col">Bobot Perilaku</th>
+                <th scope="col">Bobot Kerapian</th>
                 <th scope="col">NCF (60%)</th>
                 <th scope="col">NSF (40%)</th>
                 <th scope="col">Hasil</th>
@@ -150,7 +150,7 @@
         </thead>
         <tbody>
             <?php 
-                $query = mysqli_query($koneksi,"SELECT * FROM hasilmhs");
+                $query = mysqli_query($koneksi,"SELECT * FROM hasilsiswa");
                 if(mysqli_num_rows($query)>0){ 
             ?>
             <?php
@@ -160,16 +160,16 @@
             <tr>
                 <th scope="row"><?php echo $a; ?></th>
                 <td><?php echo $data["nama"];?></td>
-                <td><?php echo $data["bobotipk"];?></td>
-                <td><?php echo $data["bobotps"];?></td>
-                <td><?php echo $data["bobotbing"];?></td>
-                <td><?php echo $data["bobotdk"];?></td>
-                <td><?php echo $data["bobotpres"];?></td>
-                <td><?php echo $data["bobottk"];?></td>
-                <td><?php echo $data["bobotukm"];?></td>
-                <td><?php echo $data["bobotdisiplin"];?></td>
-                <td><?php echo $data["bobotki"];?></td>
-                <td><?php echo $data["bobotsmt"];?></td>
+                <td><?php echo $data["bobotmm"];?></td>
+                <td><?php echo $data["bobotbig"];?></td>
+                <td><?php echo $data["bobotbindo"];?></td>
+                <td><?php echo $data["bobotipa"];?></td>
+                <td><?php echo $data["bobotor"];?></td>
+                <td><?php echo $data["bobotkd"];?></td>
+                <td><?php echo $data["bobotpk"];?></td>
+                <td><?php echo $data["bobotpmr"];?></td>
+                <td><?php echo $data["bobotpr"];?></td>
+                <td><?php echo $data["bobotkr"];?></td>
                 <td><?php echo $data["ncf"];?></td>
                 <td><?php echo $data["nsf"];?></td>
                 <td><?php echo $data["hasil"];?></td>
@@ -183,7 +183,7 @@
     <br><br>
 
     <!-- Hapus Record -->
-    <form  role="form" method="post" action="ranking.php" class="form-inline">
+    <form  role="form" method="post" action="rangking.php" class="form-inline">
         <div class="form-group mb-2">
             <label class="sr-only"></label>
             <input type="text" readonly class="form-control-plaintext" value="Perankingan">

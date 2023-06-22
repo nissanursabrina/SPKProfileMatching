@@ -5,24 +5,24 @@
 </head>
 <body>
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  		<a class="navbar-brand text-white" href="index.php">Home</a>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<a class="navbar-brand" href="index.php">Home</a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
   		<div class="collapse navbar-collapse" id="navbarNav">
 	    	<ul class="navbar-nav">
 	      		<li class="nav-item">
-	        		<a class="nav-link text-white" href="inputdata.php">Input Data</a>
+	        		<a class="nav-link" href="inputdata.php">Input Data</a>
 	      		</li>
 	        	<li class="nav-item">
-	            	<a class="nav-link text-white" href="proses.php">Record</a>
+	            	<a class="nav-link" href="proses.php">Record</a>
 	         	</li>
 	         	<li class="nav-item">
-	            	<a class="nav-link text-white" href="ranking.php">Ranking</a>
+	            	<a class="nav-link" href="rangking.php">Ranking</a>
 	        	</li>
 	      		<li class="nav-item">
-	                <a class="nav-link text-white" href="about.php">About</a>
+	                <a class="nav-link" href="about.php">About</a>
 	        	</li>
 	    	</ul>
   		</div>
@@ -33,31 +33,39 @@
 	<div class="container"><br><br>
 
 		<h2>
-			<b>Sistem Pendukung Keputusan Pemilihan Mahasiswa Terbaik</b>
+			<b>Sistem Pendukung Keputusan Pemilihan Beasiswa</b>
 	  	</h2>
   
 		<p style="text-align: justify;">
+		STMIK adalah sebuah perguruan Tinggi Swasta, Beasiswa merupakan penghasilan bagi
+		yang menerima dan tujuan beasiswa adalah untuk membantu meringankan beban biaya pendidikkan siswa atau
+		mahasiswa yang mendapatkan. Peraturan Pemerintah Nomor 48 tahun 2008 tentang Pendanaan Pendidikan,
+		Bagian Kelima, Pasal 27 ayat (1), menyebutkan bahwa Pemerintah dan pemerintah daerah sesuai
+		kewenangannya memberi bantuan biaya pendidikan atau beasiswa kepada peserta didik yang orang tua atau
+		walinya tidak mampu membiayai pendidikannya. Pasal 27 ayat (2), menyebutkan bahwa Pemerintah dan
+		pemerintah daerah sesuai dengan kewenangannya dapat memberi beasiswa kepada peserta didik yang
+		berprestasi. Pembagaian beasiswa dilakukan oleh beberapa lembaga untuk membantu seseorang yang kurang
+		mampu ataupun berprestasi selama menempuh studinya. Perguruan Tinggi akan memberikan beasiswa kepada
+		mahasiswa setiap semester. Hal ini tentu dengan tujuan untuk meringankan beban biaya pendidikan mahasiswa.
+		Dengan kreteria sebagai berikut: IPK, penghasilan orang tua, tanggungan orang tua, semester. 
 		</p>
 
 		<p>
+		Sasaran beasiswa adalah untuk Mahasiswa berprestasi (baik pada bidang akademik/kurikuler, ko-kurikuler
+		maupun ekstra kurikuler). Dan Mahasiswa dengan prestasi minimal yang orang tua/wali-nya tidak mampu
+		membiayai pendidikannya. Kriteria beasiswa yang diterapkan di STMIK adalah sebagai berikut:
 		</p>
 
 		<ul class="list-unstyled">
     		<li><b>Core factor (60%) :</b>
         		<ul>
             		<li>IPK</li>
-            		<li>Public Speaking</li>
-					<li>Prestasi</li>
-					<li>Karya Ilmiah</li>
-					<li>Bahasa Inggris</li>
-					<li>Daftar Kehadiran</li>
+            		<li>Penghasilan orang tua</li>
         		</ul>
       		</li>
       		<li><b>Secondar factor (40%) :</b>
         		<ul>
-		            <li>Tingkah Laku</li>
-					<li>Aktif UKM atau HMJ</li>
-					<li>Kedisiplinan</li>
+		            <li>Tanggungan orang tua</li>
 		            <li>Semester</li>
         		</ul>
       		</li>
@@ -106,14 +114,16 @@
   		</dl>
   		<!-- /IPK -->
 
-		<!-- Public Speaking -->
+		<!-- Penghasilan Ortu -->
 		<dl class="row">
     		<dt class="col-sm-1">2.</dt>
-    		<dd class="col-sm-11"><b>Public Speaking</b></dd>
+    		<dd class="col-sm-11"><b>Penghasilan Orang tua</b></dd>
 
     		<dt class="col-sm-1"></dt>
     		<dd class="col-sm-11">
-    			Kriteria Public Speaking untuk mengukur kemampuan mahasiswa dalam berbicara di depan umum
+    			Kriteria penghasilan orangtua merupakan persyaratan yang dibutuhkan untuk pengambilan
+      			keputusan, berdasarkan jumlah penghasilan tetap maupun tidak setiap bulannya. Berikut penjabaran
+      			interval jumlah penghasilan orangtua .
     		</dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -121,41 +131,43 @@
       			<table class="table table-striped">
         			<thead>
           				<tr>
-            				<th scope="col">Public Speaking</th>
+            				<th scope="col">Penghasilan ortu</th>
 				            <th scope="col">Nilai</th>
 				        </tr>
 			        </thead>
 			        <tbody>
+			          	<tr>
+			            	<td><=1.000.000 </td>
+			            	<th scope="row">4</th>
+			          	</tr>
+			          	<tr>
+			            	<td>>1.000.000 <=3.000.000</td>
+			            	<th scope="row">3</th>
+			          	</tr>
+			          	<tr>
+			            	<td>>3.000.000 <=5.000.000</td>
+			            	<th scope="row">2</th>
+		          		</tr>
 		          		<tr>
-		            		<td>Jumlah 1</td>
+		            		<td>>=5.000.000</td>
 		            		<th scope="row">1</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 2</td>
-		            		<th scope="row">2</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 3</td>
-		            		<th scope="row">3</th>
-		         		</tr>
-		          		<tr>
-		            		<td>Jumlah >3 </td>
-		            		<th scope="row">4</th>
 		          		</tr>
 		        	</tbody>
 		      	</table>
 		    </dd>
 		</dl>
-  		<!-- /Public Speaking -->
+  		<!-- /Penghasilan Orang Tua -->
 
-  		<!-- Prestasi -->
+  		<!-- Tanggungan -->
   		<dl class="row">
     		<dt class="col-sm-1">3.</dt>
-    		<dd class="col-sm-11"><b>Prestasi</b></dd>
+    		<dd class="col-sm-11"><b>Tanggungan Orang Tua</b></dd>
 
 		    <dt class="col-sm-1"></dt>
 		    <dd class="col-sm-11">
-		      	Kriteria Prestasi untuk mengukur jumlah prestasi yang telah diraih oleh mahasiswa.
+		      	Kriteria jumlah tanggungan orangtua merupakan persyaratan yang dibutuhkan untuk pengambilan
+		      	keputusan, berdasarkan jumlah anak yang masih menjadi tanggungan orangtua berupa biaya hidup.
+		      	Berikut penjabaran jumlah interval anak yang telah dikonversikan dengan bilangan.
 		    </dd>
 
 		    <dt class="col-sm-1"></dt>
@@ -163,7 +175,7 @@
 		      	<table class="table table-striped">
 		        	<thead>
 		          		<tr>
-		            		<th scope="col">Prestasi</th>
+		            		<th scope="col">Tanggungan Orang tua</th>
 		            		<th scope="col">Nilai</th>
 		          		</tr>
 		        	</thead>
@@ -188,263 +200,11 @@
 		      	</table>
 		    </dd>
 		</dl>
-		<!-- /Prestasi -->
-
-		<!-- Karya Ilmiah-->
-		<dl class="row">
-    		<dt class="col-sm-1">4.</dt>
-    		<dd class="col-sm-11"><b>Karya Ilmiah</b></dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	Kriteria Karya Ilmiah untuk mengukur jumlah karya ilmiah yang telah dihasilkan oleh mahasiswa
-		    </dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	<table class="table table-striped">
-		        	<thead>
-		          		<tr>
-		            		<th scope="col">Karya Ilmiah</th>
-		            		<th scope="col">Nilai</th>
-		          		</tr>
-		        	</thead>
-		        	<tbody>
-		          		<tr>
-		            		<td>Jumlah 1</td>
-		            		<th scope="row">1</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 2</td>
-		            		<th scope="row">2</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 3</td>
-		            		<th scope="row">3</th>
-		         		</tr>
-		          		<tr>
-		            		<td>Jumlah >3 </td>
-		            		<th scope="row">4</th>
-		          		</tr>
-		        	</tbody>
-		      	</table>
-		    </dd>
-		</dl>
-		<!-- /Karya Ilmiah -->
-
-		<!-- Bahasa Inggris -->
-		<dl class="row">
-    		<dt class="col-sm-1">5.</dt>
-    		<dd class="col-sm-11"><b>Bahasa Inggris</b></dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	Kriteria Bahasa Inggris untuk mengukur kemampuan mahasiswa dalam berbahasa Inggris. 
-		    </dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	<table class="table table-striped">
-		        	<thead>
-		          		<tr>
-		            		<th scope="col">Bahasa Inggris</th>
-		            		<th scope="col">Nilai</th>
-		          		</tr>
-		        	</thead>
-		        	<tbody>
-		          		<tr>
-		            		<td>Jumlah 1</td>
-		            		<th scope="row">1</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 2</td>
-		            		<th scope="row">2</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 3</td>
-		            		<th scope="row">3</th>
-		         		</tr>
-		          		<tr>
-		            		<td>Jumlah >3 </td>
-		            		<th scope="row">4</th>
-		          		</tr>
-		        	</tbody>
-		      	</table>
-		    </dd>
-		</dl>
-		<!-- /Bahasa Inggris -->
-
-		<!-- Daftar Kehadiran -->
-		<dl class="row">
-    		<dt class="col-sm-1">6.</dt>
-    		<dd class="col-sm-11"><b>Daftar Kehadiran</b></dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	Kriteria Daftar Kehadiran untuk mengukur jumlah kehadiran mahasiswa.
-		    </dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	<table class="table table-striped">
-		        	<thead>
-		          		<tr>
-		            		<th scope="col">Daftar Kehadiran</th>
-		            		<th scope="col">Nilai</th>
-		          		</tr>
-		        	</thead>
-		        	<tbody>
-		          		<tr>
-		            		<td>Jumlah 1</td>
-		            		<th scope="row">1</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 2</td>
-		            		<th scope="row">2</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 3</td>
-		            		<th scope="row">3</th>
-		         		</tr>
-		          		<tr>
-		            		<td>Jumlah >3 </td>
-		            		<th scope="row">4</th>
-		          		</tr>
-		        	</tbody>
-		      	</table>
-		    </dd>
-		</dl>
-		<!-- /Daftar Kehadiran -->
-
-		<!--Tingkah Laku -->
-		<dl class="row">
-    		<dt class="col-sm-1">7.</dt>
-    		<dd class="col-sm-11"><b>Tingkah Laku</b></dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	Kriteria Tingkah Laku untuk mengukur tingkah laku mahasiswa
-		    </dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	<table class="table table-striped">
-		        	<thead>
-		          		<tr>
-		            		<th scope="col">Tingkah Laku</th>
-		            		<th scope="col">Nilai</th>
-		          		</tr>
-		        	</thead>
-		        	<tbody>
-		          		<tr>
-		            		<td>Jumlah 1</td>
-		            		<th scope="row">1</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 2</td>
-		            		<th scope="row">2</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 3</td>
-		            		<th scope="row">3</th>
-		         		</tr>
-		          		<tr>
-		            		<td>Jumlah >3 </td>
-		            		<th scope="row">4</th>
-		          		</tr>
-		        	</tbody>
-		      	</table>
-		    </dd>
-		</dl>
-		<!-- /Tingkah Laku -->
-
-		<!-- Keaktifan Mengkuti UKM atau HMJ -->
-		<dl class="row">
-    		<dt class="col-sm-1">8.</dt>
-    		<dd class="col-sm-11"><b>Keaktifan Mengkuti UKM atau HMJ</b></dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	Kriteria Keaktifan Mengkuti UKM atau HMJ untuk mengukur tingkat keaktifan mahasiswa dalam mengikuti kegiatan organisasi seperti Unit Kegiatan Mahasiswa (UKM) atau Himpunan Mahasiswa Jurusan (HMJ)
-		    </dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	<table class="table table-striped">
-		        	<thead>
-		          		<tr>
-		            		<th scope="col">Keaktifan Mengkuti UKM atau HMJ</th>
-		            		<th scope="col">Nilai</th>
-		          		</tr>
-		        	</thead>
-		        	<tbody>
-		          		<tr>
-		            		<td>Jumlah 1</td>
-		            		<th scope="row">1</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 2</td>
-		            		<th scope="row">2</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 3</td>
-		            		<th scope="row">3</th>
-		         		</tr>
-		          		<tr>
-		            		<td>Jumlah >3 </td>
-		            		<th scope="row">4</th>
-		          		</tr>
-		        	</tbody>
-		      	</table>
-		    </dd>
-		</dl>
-		<!-- /Keaktifan Mengkuti UKM atau HMJ -->
-
-<!--Kedisiplinan -->
-<dl class="row">
-    		<dt class="col-sm-1">9.</dt>
-    		<dd class="col-sm-11"><b>Kedisiplinan</b></dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	Kriteria Kedisiplinan mengacu pada tingkat keteraturan, ketertiban, dan kepatuhan mahasiswa terhadap aturan dan tata tertib yang berlaku di lingkungan kampus. Kedisiplinan merupakan salah satu aspek penting yang dinilai karena menunjukkan sikap dan perilaku mahasiswa dalam menjalankan tanggung jawabnya sebagai mahasiswa.
-		    </dd>
-
-		    <dt class="col-sm-1"></dt>
-		    <dd class="col-sm-11">
-		      	<table class="table table-striped">
-		        	<thead>
-		          		<tr>
-		            		<th scope="col">Kedisiplinan</th>
-		            		<th scope="col">Nilai</th>
-		          		</tr>
-		        	</thead>
-		        	<tbody>
-		          		<tr>
-		            		<td>Jumlah 1</td>
-		            		<th scope="row">1</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 2</td>
-		            		<th scope="row">2</th>
-		          		</tr>
-		          		<tr>
-		            		<td>Jumlah 3</td>
-		            		<th scope="row">3</th>
-		         		</tr>
-		          		<tr>
-		            		<td>Jumlah >3 </td>
-		            		<th scope="row">4</th>
-		          		</tr>
-		        	</tbody>
-		      	</table>
-		    </dd>
-		</dl>
-		<!-- /Kedisiplinan -->
+		<!-- /Tanggungan -->
 
 	  	<!-- Semester -->
 	  	<dl class="row">
-	    	<dt class="col-sm-1">10.</dt>
+	    	<dt class="col-sm-1">4.</dt>
 	    	<dd class="col-sm-11"><b>Semester</b></dd>
 
 		    <dt class="col-sm-1"></dt>
